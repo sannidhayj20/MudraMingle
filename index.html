@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mudra Detection</title>
+    <style>
+        /* Define the button style */
+        .green-button {
+            background-color: #4CAF50;  /* Green color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        /* Hover effect */
+        .green-button:hover {
+            background-color: #45a049;  /* Slightly darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Mudra Detection</h1>
+    <img src="{{ url_for('video_feed') }}" style="max-width:100%;">
+    <form method="POST" action="/send_email">
+        <!-- Text input field for the recipient's email address -->
+        <label for="recipient_email">Recipient's Email Address:</label>
+        <input type="email" id="recipient_email" name="recipient_email" required>
+        <!-- Add the CSS class to the button -->
+        <button type="submit" class="green-button">Send Email</button>
+    </form>
+</body>
+</html>
