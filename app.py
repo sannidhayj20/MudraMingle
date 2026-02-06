@@ -240,7 +240,7 @@ def send_email():
         msg.set_content("The Mudras Detected and practiced are:\n" + final_result)
 
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
-            smtp.login("g11ascsannidhay.tws@gmail.com", "pkfxkhqhilllrwyo")
+            smtp.login("g11ascsannidhay.tws@gmail.com", "")
             smtp.send_message(msg)
 
         return redirect(url_for('index'))  # Redirect back to the index page
